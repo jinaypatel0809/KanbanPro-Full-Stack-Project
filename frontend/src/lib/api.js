@@ -1,6 +1,8 @@
 import { applyUserTheme } from './theme';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
+const API_BASE_URL = (
+  import.meta.env.VITE_API_URL || 'https://kanbanpro-full-stack-project.onrender.com/api'
+).replace(/\/+$/, '');
 
 export async function apiRequest(path, options = {}) {
   let response;
