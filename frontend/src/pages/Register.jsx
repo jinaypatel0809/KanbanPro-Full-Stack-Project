@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Lock, Eye, EyeOff, UserPlus, Shield, Zap, Users, TrendingUp, ShieldCheck } from 'lucide-react';
 import Logo from '../components/Logo';
-import SocialButtons from '../components/SocialButtons';
 import { apiRequest } from '../lib/api';
 
 const readProfilePhoto = (file) => new Promise((resolve, reject) => {
@@ -237,7 +236,6 @@ export default function Register() {
             </button>
           </form>
 
-          <SocialButtons />
 
           <div className="mt-6 text-center text-sm text-slate-500 dark:text-slate-400">
             Already have an account?{' '}

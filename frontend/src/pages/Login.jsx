@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, LogIn, Zap, Users, TrendingUp, ShieldCheck, Heart } from 'lucide-react';
 import Logo from '../components/Logo';
-import SocialButtons from '../components/SocialButtons';
 import { apiRequest, saveAuthenticatedUser } from '../lib/api';
 
 export default function Login() {
@@ -213,9 +212,6 @@ export default function Login() {
               <LogIn className="w-5 h-5" /> {isSubmitting ? 'Signing in...' : 'Login'}
             </button>
           </form>
-
-          {/* Social Sign-in */}
-          <SocialButtons />
 
           {/* Sign Up Redirect Link */}
           <div className="mt-8 text-center text-sm text-slate-500 dark:text-slate-400">
